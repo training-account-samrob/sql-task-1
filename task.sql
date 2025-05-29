@@ -69,8 +69,7 @@ GROUP BY category.name;
 SELECT actor.first_name || ' ' || actor.last_name AS full_name, COUNT(film_actor.film_id) AS film_count FROM film_actor
 JOIN actor ON actor.actor_id = film_actor.actor_id
 GROUP BY full_name
-HAVING COUNT(film_actor.film_id) > 20;
--- can't use alias in "HAVING" clauses
+HAVING COUNT(film_actor.film_id) > 20; -- can't use alias in "HAVING" clauses
 
 /* 13. Find the most popular movie category by rental count */
 SELECT category.name AS category_name, COUNT(rental.rental_id) AS rental_count FROM film
