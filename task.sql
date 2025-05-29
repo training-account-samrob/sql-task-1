@@ -47,7 +47,9 @@ WHERE country.country_id = 103;
 SELECT DISTINCT film.title, film.rental_rate, inventory.store_id FROM film
 JOIN inventory ON inventory.film_id = film.film_id
 JOIN rental ON rental.inventory_id = inventory.inventory_id
-WHERE film.rental_rate = ( SELECT MAX(rental_rate) FROM film);
+WHERE film.rental_rate = ( SELECT MAX(rental_rate) FROM film )
+ORDER BY film.title ASC
+LIMIT 2;
 
 /* 9. Write a query to display languages for movie available */
 SELECT name FROM language;
