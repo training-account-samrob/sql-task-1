@@ -1,0 +1,23 @@
+Specific rules
+first normal form
+using row to convey information is not permitted
+mixing data types is not permitted
+having a table without a primary key is not permitted
+repeating groups is not permitted
+
+second normal form
+only dependant non key attributes of the entire primary key should be part of a table. Anything else should be in its own table.
+For viewing together, we would join on the relation.
+
+(third normal form) boyce codd normal form
+every (non key) attribute in a table should depend on the key, the whole key and nothing but the key. This specifically negates transitive dependency
+
+normalised tables have one version of the truth and are protected from anything else
+
+first, second, third etc normal form
+
+be explicit. If ordering on something, show what that is
+Don't mix data types in a column
+table without primary key violates the first form of normalisation
+
+storing a repeating group of data in a single row violates from 1
